@@ -67,4 +67,3 @@ export interface ReportItem {
   reportedAt: string;
   status: 'pending' | 'resolved' | 'dismissed';
 }
-}
