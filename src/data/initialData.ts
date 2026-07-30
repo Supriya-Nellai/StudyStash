@@ -5575,5 +5575,3 @@ export const INITIAL_NOTES: NoteItem[] = [
     "approved": true
   }
   ];
-
-];
