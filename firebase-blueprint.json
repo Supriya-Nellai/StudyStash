@@ -1,0 +1,103 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "Registered user accounts",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "department": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "emailVerified": { "type": "boolean" },
+        "provider": { "type": "string" },
+        "role": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email", "name"]
+    },
+    "notes": {
+      "title": "Study Notes",
+      "description": "Uploaded study materials and notes",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "department": { "type": "string" },
+        "semester": { "type": "number" },
+        "subject": { "type": "string" },
+        "description": { "type": "string" },
+        "pdfURL": { "type": "string" },
+        "previewImage": { "type": "string" },
+        "uploadedBy": { "type": "string" },
+        "uploadedByUID": { "type": "string" },
+        "uploadedAt": { "type": "string" },
+        "downloads": { "type": "number" },
+        "fileHash": { "type": "string" },
+        "fileSize": { "type": "string" },
+        "oneDriveURL": { "type": "string" },
+        "approved": { "type": "boolean" }
+      },
+      "required": ["title", "department", "semester", "subject"]
+    },
+    "departments": {
+      "title": "Departments",
+      "description": "Academic departments list",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "subjects": {
+      "title": "Subjects",
+      "description": "Department subjects by semester",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string" },
+        "name": { "type": "string" },
+        "department": { "type": "string" },
+        "semester": { "type": "number" }
+      }
+    },
+    "uploads": {
+      "title": "Upload Log",
+      "description": "History of user uploaded files",
+      "type": "object",
+      "properties": {
+        "noteId": { "type": "string" },
+        "title": { "type": "string" },
+        "department": { "type": "string" },
+        "semester": { "type": "number" },
+        "subject": { "type": "string" },
+        "uploadedByUID": { "type": "string" },
+        "uploadedAt": { "type": "string" }
+      }
+    },
+    "downloads": {
+      "title": "Download History",
+      "description": "History of downloaded notes",
+      "type": "object",
+      "properties": {
+        "noteId": { "type": "string" },
+        "noteTitle": { "type": "string" },
+        "department": { "type": "string" },
+        "downloadedByUID": { "type": "string" },
+        "downloadedAt": { "type": "string" }
+      }
+    },
+    "reports": {
+      "title": "Material Reports",
+      "description": "User flags or reports on notes",
+      "type": "object",
+      "properties": {
+        "noteId": { "type": "string" },
+        "reason": { "type": "string" },
+        "reportedByUID": { "type": "string" },
+        "reportedAt": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    }
+  }
+}

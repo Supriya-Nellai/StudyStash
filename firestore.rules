@@ -1,0 +1,40 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users collection
+    match /users/{userId} {
+      allow read, create, update: if true;
+      allow delete: if false;
+    }
+
+    // Notes collection
+    match /notes/{noteId} {
+      allow read, create, update, delete: if true;
+    }
+
+    // Departments & Subjects
+    match /departments/{deptId} {
+      allow read, create, update, delete: if true;
+    }
+    
+    match /subjects/{subjectId} {
+      allow read, create, update, delete: if true;
+    }
+
+    // Uploads
+    match /uploads/{uploadId} {
+      allow read, create, update, delete: if true;
+    }
+
+    // Downloads history
+    match /downloads/{downloadId} {
+      allow read, create, update, delete: if true;
+    }
+
+    // Reports
+    match /reports/{reportId} {
+      allow read, create, update, delete: if true;
+    }
+  }
+}

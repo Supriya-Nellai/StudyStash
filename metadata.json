@@ -1,0 +1,6 @@
+{
+  "name": "StudyStash",
+  "description": "Free notes sharing platform for Anna University 2021 Regulation college students",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
